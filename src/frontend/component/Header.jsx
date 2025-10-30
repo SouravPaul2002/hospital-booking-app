@@ -1,10 +1,13 @@
 import "../css/header.css";
+import { Link } from "react-router-dom";
+import { useEffect } from "react";
 import {
     FaLocationDot,
     FaHeartPulse,
     FaUser,
     FaBars,
     FaMagnifyingGlass,
+    FaLocationCrosshairs,
 } from "react-icons/fa6";
 import React, { useState } from "react";
 
@@ -16,21 +19,32 @@ function Header() {
         console.log("Searching for:", value);
     };
 
-    const handleGetLocation = () => {
-        console.log("Get location clicked");
-    };
-
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
+
+    const [showPopup, setShowPopup] = useState(false);
+    const closePopup = () => setShowPopup(false);
+
+    const handleGetLocation = () => {
+        setShowPopup(true);
+    };
+
+    useEffect(() => {
+        if (showPopup) {
+            document.body.classList.add("disable-scroll");
+        } else {
+            document.body.classList.remove("disable-scroll");
+        }
+    }, [showPopup]);
 
     return (
         <>
             <div className="header">
                 {/* Logo */}
-                <a href="#" className="logo">
+                <Link to="/" className="logo">
                     <FaHeartPulse style={{ fontSize: "2.8rem" }} /> medcare
-                </a>
+                </Link>
 
                 {/* Search Bar */}
                 <div className="search-bar" id="srchbar-above">
@@ -64,26 +78,66 @@ function Header() {
 
                 {/* Navbar Links (Dropdown for Mobile) */}
                 <div className={`navbar ${isMenuOpen ? "active" : ""}`}>
-                    <a className="navlink" href="#">
+                    <Link to="/" className="navlink" >
                         Home
-                    </a>
-                    <a className="navlink" href="#">
-                        Services
-                    </a>
-                    <a className="navlink" href="#">
+                    </Link>
+                    <Link to="/" className="navlink" >
+                        Service
+                    </Link>
+                    <Link to="/" className="navlink" >
                         Review
-                    </a>
-                    <a className="navlink" href="#">
+                    </Link>
+                    <Link to="/" className="navlink" >
                         Contact
-                    </a>
+                    </Link>
                 </div>
                 {/* User Avatar */}
                 <div className="user-avatar-container">
-                    <a href="#" id="user-avatar">
+                    <Link to="/" id="user-avatar">
                         <FaUser className="account-avatar" />
-                    </a>
+                    </Link>
                 </div>
             </div>
+            {showPopup && (
+                <div className="location-window" id="loc-win">
+                    <div className="card popup">
+                        <button className="dismiss-btn" id="dismiss" onClick={closePopup}>
+                            &times;
+                        </button>
+
+                        <div className="loc-head">
+                            <span>Enter an Indian pincode here</span>
+                            <div className="loc-option-tab">
+                                <input
+                                    type="number"
+                                    name="pincode"
+                                    placeholder="Pincode here"
+                                    id="zipcode"
+                                />
+                                <button className="btn" id="pin-apply">
+                                    Apply
+                                </button>
+                            </div>
+                        </div>
+
+                        <div className="loc-head">
+                            <span>Allow to access your location</span>
+                            <div className="loc-option-tab">
+                                <button className="get-location btn" id="det-location">
+                                    <FaLocationCrosshairs /> Detect my location
+                                </button>
+                            </div>
+                        </div>
+
+                        <div className="loc-head">
+                            <div className="loc-option-tab">
+                                <label id="location-txt">Your location will appear here</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
+
         </>
     );
 }

@@ -284,3 +284,93 @@ html {
   }
 }
 
+
+/* location popup css starts here  */
+.location-window .popup
+{
+    border: 2px solid var(--green);
+    border-radius: 0px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: none;
+    height: fit-content;
+}
+.location-window {
+    position: fixed; /* make it overlay entire screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(154, 154, 154, 0.628);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+.card .dismiss-btn
+{
+    background-color: white;
+    position: relative;
+    top: 0;
+    left: 0;
+    font-size: 1.8rem;
+    color: var(--black);
+    border-radius: 0px;
+    padding: 0.5rem;
+}
+.loc-head
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.3rem;
+    color: var(--black);
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+.loc-option-tab
+{
+    display: flex;
+    margin: 2rem 2rem;
+    margin-top: 0px;
+    justify-content: right;
+    padding: 2rem;
+}
+.loc-option-tab:nth-child(even)
+{
+    border-bottom: 1px solid #ccc;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.loc-option-tab input
+{
+    width: 15rem;
+    padding: 0.8rem;
+    border: 1.5px solid #ccc;
+    border-radius: 10px;
+    margin-right: 2rem;
+    background-color: #fff;
+}
+#location-txt
+{
+    color: red;
+    font-weight: 600;
+}
+
+#pin-apply, #det-location{
+  background-color: var(--green);
+  border: 1.5px solid var(--green);
+}
+#pin-apply:hover, #det-location:hover{
+  background-color: #fff;
+}
+
+.disable-scroll
+{
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+/* location popup css ends here  */
+
