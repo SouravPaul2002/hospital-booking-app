@@ -1,13 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
-:root {
-  --green: #00a896;
-  --black: #444;
-  --light-color: #777;
-  --box-shadow: 0.5rem 0.5rem 0 rgba(22, 160, 133, 0.2);
-  --border: 0.2rem solid var(--green);
-}
-
 * {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -21,11 +13,7 @@
   background-color: rgb(243, 255, 253);
 } */
 
-html {
-  font-size: 55%;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-}
+
 
 /* HEADER */
 .header {
@@ -66,7 +54,7 @@ html {
 
 .search-bar input[type="text"] {
   width: 400px;
-  padding: 5px;
+  padding: 12px;
   border: 1.5px solid #ccc;
   border-radius: 1rem;
   background-color: #fff;
@@ -79,7 +67,7 @@ html {
   justify-content: center;
   align-items: center;
   width: 5rem;
-  padding: 0.7rem;
+  padding: 0.9rem;
   background-color: var(--green);
   border: 2px solid var(--green);
   color: #fff;
@@ -97,7 +85,7 @@ html {
 }
 /* NAVBAR */
 .navbar a {
-  font-size: 1.7rem;
+  font-size: 1.9rem;
   color: var(--light-color);
   margin-left: 2rem;
   position: relative;
@@ -218,14 +206,14 @@ html {
 /* Adjust search bar smoothly for mid screens (915px to 768px) */
 @media (max-width: 915px) {
   .search-bar {
-    width: 60%;
+    width: 50%;
     gap: 0.5rem;
   }
 
   .search-bar input[type="text"] {
     width: 55%;
     font-size: 1.5rem;
-    padding: 0.6rem 1rem;
+    padding: 0.4rem 0.8rem;
   }
 
   .search-bar button {

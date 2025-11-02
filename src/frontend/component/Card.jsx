@@ -32,7 +32,7 @@ function Card({ hospital }) {
                         <FaIndianRupeeSign /> {hospital.fare} /-
                     </p>
                 </div>
-                <Link to="/book">
+                <Link to="/book" state={{hospital}}>
                     <button id='c1' className='btn btn-secondary-orange'>
                         Book Bed
                     </button>

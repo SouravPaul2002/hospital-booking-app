@@ -15,6 +15,11 @@
   --text-dark: #222;
   --bg-light: #f9f9f9;
 }
+/* html {
+  font-size: 55%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+} */
 a {
   font-weight: 500;
   color: #646cff;
@@ -26,11 +31,13 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+  padding: 0;
+  width: 100%;
   min-height: 100vh;
+  background-color: #fff;
+  display: block;
 }
+
 
 h1 {
   font-size: 3.2em;
@@ -54,6 +61,19 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+
+/* ===== FIX SCALING FOR ALL SCREENS ===== */
+html {
+  font-size: 62.5%; /* Makes 1rem = 10px (normal readable scale) */
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Optional: slightly larger default font for all body text */
+body {
+  font-size: 1.6rem; /* 16px base text */
 }
 
 @media (prefers-color-scheme: light) {

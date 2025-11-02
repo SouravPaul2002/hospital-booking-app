@@ -1,0 +1,180 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: linear-gradient(rgb(255, 255, 255), rgb(120, 227, 248));
+} */
+
+.warning {
+  color: rgb(0, 0, 0);
+  border: 1px solid rgb(255, 194, 9);
+  padding: 0.76rem;
+  background-color: rgb(255, 229, 142);
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.container {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.42);
+}
+
+header {
+  padding-bottom: 60px;
+}
+
+.parent .logo {
+  float: left;
+}
+
+.container .form {
+  margin-top: 30px;
+}
+
+.form .input-box {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.input-box label {
+  color: #333;
+}
+
+.form input,
+.select-box {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #707070;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+
+.input-box input:focus {
+  border-color: #00a896;
+  box-shadow: 0 0 4px rgba(0, 168, 150, 0.4);
+}
+
+.form .column {
+  display: flex;
+  column-gap: 15px;
+}
+
+.form .gender-box {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.gender-box label {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.gender-option,
+.gender {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  flex-wrap: wrap;
+}
+
+.gender {
+  column-gap: 5px;
+}
+
+.gender input {
+  accent-color: #00a896;
+  cursor: pointer;
+}
+
+.gender label {
+  color: #707070;
+  cursor: pointer;
+}
+
+.address input,
+.address .select-box {
+  margin-top: 15px;
+}
+
+.select-box select {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #707070;
+  font-size: 1rem;
+  background: transparent;
+}
+
+.form button {
+  height: 55px;
+  width: 100%;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-top: 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  background: #00a896;
+}
+
+.form button:hover {
+  background-color: white;
+  color: #00a896;
+  border: 1px solid #00a896;
+}
+
+.form button:active {
+  background: rgb(107, 180, 167);
+}
+
+input[type="radio"] {
+  width: 20px;
+  height: 20px;
+}
+
+.container {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.form .input-box {
+  margin-top: 25px;
+}
+
+@media screen and (max-width: 500px) {
+  .form .column {
+    flex-wrap: wrap;
+  }
+  .gender-option,
+  .gender {
+    row-gap: 15px;
+  }
+  .logo img {
+    width: 70px;
+    padding-top: 15px;
+  }
+}

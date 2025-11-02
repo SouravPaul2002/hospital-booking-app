@@ -12,6 +12,8 @@ function Hospitals() {
             distance: "10",
             fare: "324",
             image: "/image/hospital.jpg",
+            district: "North 24 parganas",
+            phone: 8277361728,
         },
         {
             id: 2,
@@ -22,6 +24,8 @@ function Hospitals() {
             distance: "15",
             fare: "450",
             image: "/image/hospital.jpg",
+            district: "North 24 parganas",
+            phone: 8277361728,
         },
     ];
 
