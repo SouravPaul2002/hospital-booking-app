@@ -81,15 +81,15 @@ function Header() {
                     <Link to="/" className="navlink" >
                         Home
                     </Link>
-                    <Link to="/" className="navlink" >
+                    <a href="#service-section" className="navlink" >
                         Service
-                    </Link>
-                    <Link to="/" className="navlink" >
+                    </a>
+                    <a href="#review-section" className="navlink" >
                         Review
-                    </Link>
-                    <Link to="/" className="navlink" >
+                    </a>
+                    <a href="#contact-section" className="navlink" >
                         Contact
-                    </Link>
+                    </a>
                 </div>
                 {/* User Avatar */}
                 <div className="user-avatar-container">

@@ -6,17 +6,17 @@ import {
 function Footer(){
     return <>
         <div className='footer'>
-                <div class="footer-top">
-                    <Link to={'/'} class="logo"><FaHeartPulse style={{ fontSize: "2.8rem" }} />medcare</Link>
-                    <div class="footer-txt">
+                <div className="footer-top">
+                    <Link to={'/'} className="logo"><FaHeartPulse style={{ fontSize: "2.8rem" }} />medcare</Link>
+                    <div className="footer-txt">
                     Our online platform simplifies the process of reserving hospital beds swiftly and efficiently, ensuring timely access to critical medical resources.
                     Experience hassle-free hospital bed reservations through our online service, designed for ease and accessibility during urgent times.
                     We strive to make securing hospital beds a seamless experience by offering a user-friendly online platform, making healthcare accessibility a priority.
                     Our online hospital bed booking service connects patients with the right care swiftly, providing a stress-free solution for medical bed reservations.
                     </div>
                 </div>
-                <div class="footer-bottom">
-                    <div class="company-col footer-link-col">
+                <div className="footer-bottom">
+                    <div className="company-col footer-link-col">
                         <h2>Company</h2>
                         <ul>
                             <li>About Company</li>
@@ -27,7 +27,7 @@ function Footer(){
                             <li>Contact</li>
                         </ul>
                     </div>
-                    <div class="shopping-col footer-link-col">
+                    <div className="shopping-col footer-link-col">
                         <h2>Shopping</h2>
                         <ul>
                             <li>Browse by Manufacturers</li>
@@ -36,7 +36,7 @@ function Footer(){
                             <li>FAQs</li>
                         </ul>
                     </div>
-                    <div class="link-col footer-link-col">
+                    <div className="link-col footer-link-col">
                         <h2>Useful Links</h2>
                         <ul>
                             <li>Home</li>
