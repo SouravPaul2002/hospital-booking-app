@@ -5,6 +5,7 @@ import Footer from './frontend/component/Footer';
 import Home from './frontend/page/Home';
 import Hospitals from './frontend/page/Hospitals';
 import Book from './frontend/page/Book';
+import Confirmation from './frontend/page/Confirmation';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path='/hospitals' element={<Hospitals />} />
             <Route path='/book' element={<Book />} />
+            <Route path='/confirmation' element={<Confirmation />} />
           </Routes>
         </main>
         <Footer />
